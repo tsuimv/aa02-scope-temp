@@ -13,7 +13,25 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+function recVolume(height){
+  let volume = height;
+  let count = 1;
+
+  return function(num){
+    count++
+
+    if(count === 2){
+      volume *= num;
+      return recVolume;
+    } else if(count == 3){
+      volume *= num
+      return volume
+    } else {
+      return volume
+    }
+    }
+  }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
