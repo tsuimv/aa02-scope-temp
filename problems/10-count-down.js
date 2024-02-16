@@ -28,7 +28,23 @@ Example 4:
 
 ***********************************************************************/
 
-// Your code here 
+function countDownTimer(num){
+  let year = 'Happy New Year!'
+
+  if(num === 0){
+    return year;
+  }
+  return function newYear(){
+    num--
+
+    if(num === 0){
+      return year
+    } else {
+      return newYear;
+    }
+  }
+  }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
